@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 
+// Define Property Schema
 const propertySchema = new mongoose.Schema({
-    media: String,
+    media: [String],
     description: String,
     price: Number,
     address: String,
@@ -19,7 +20,12 @@ const propertySchema = new mongoose.Schema({
         name: String,
         email: String,
         phone: String
-    }
+    },
+    DatePosted: { type: Date, default: Date.now },
+    Gender: String,
+    Deposit: Number,
+    AvailableFrom: Date,
+    Washroom: { type: Number, default: 1 }
 });
 
 module.exports = mongoose.model('Property', propertySchema);
