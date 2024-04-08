@@ -70,3 +70,7 @@ async function seedDatabase() {
 
 // Call the function to seed the database
 seedDatabase();
+
+
+
+// this is for test
